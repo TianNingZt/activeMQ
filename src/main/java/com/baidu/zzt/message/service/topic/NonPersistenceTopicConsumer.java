@@ -3,6 +3,8 @@
  */
 package com.baidu.zzt.message.service.topic;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
@@ -13,9 +15,8 @@ import javax.jms.Topic;
 
 import com.baidu.zzt.message.util.MsgUtil;
 
-public class ConsumeService extends Thread {
-    @Override
-    public void run() {
+public class NonPersistenceTopicConsumer {
+    public static void main(String[] args) {
         Session session = MsgUtil.getDefaultSession();
         try {
             Topic topic = session.createTopic("topic");

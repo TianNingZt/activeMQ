@@ -14,7 +14,7 @@ import javax.jms.Topic;
 
 import com.baidu.zzt.message.util.MsgUtil;
 
-public class TopicMsgProducer {
+public class NonPersistenceTopicProcuder {
     public static void main(String[] args) throws JMSException, InterruptedException {
         Session session = MsgUtil.getDefaultSession();
         Topic topic = session.createTopic("topic");

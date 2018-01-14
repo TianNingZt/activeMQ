@@ -17,16 +17,16 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import com.baidu.zzt.message.util.MsgUtil;
 
 public class QueueMsgProducer {
+
     public static void main(String[] args) throws JMSException {
         Session session = MsgUtil.getDefaultSession();
         Queue queue = session.createQueue("queue");
         MessageProducer producer = session.createProducer(queue);
-        TextMessage message = session.createTextMessage("发送：");
         for (int i = 0; i < 10; i++) {
-            message.setText(message.getText() + i);
+            TextMessage message = session.createTextMessage(i + "");
             producer.send(message);
         }
-        System.out.println("消息发送成功");
+        System.out.println("消息发送成功..");
         producer.close();
     }
 

@@ -1,1 +1,1 @@
-test
+this is learning project of ActiveMq

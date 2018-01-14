@@ -1,2 +1,0 @@
-# activeMQ
-ActiveMQ
