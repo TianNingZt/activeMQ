@@ -13,7 +13,8 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 public class MsgUtil {
     private static final String USER = ActiveMQConnection.DEFAULT_USER;
     private static final String PWD = ActiveMQConnection.DEFAULT_PASSWORD;
-    private static final String BROKER = ActiveMQConnection.DEFAULT_BROKER_URL;
+    //    private static final String BROKER = ActiveMQConnection.DEFAULT_BROKER_URL;
+    private static final String BROKER = "tcp://localhost:666";
 
     public static Session getDefaultSession() {
         Session session = null;
